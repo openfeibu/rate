@@ -31,7 +31,7 @@ class RateController extends ApiController
             $date = date("Y-m-d",strtotime($request->get("timeStamp")));
             $rates = $rates->where('date',$date);
         }
-        $rates = $rates->orderBy('currencyCode','asc')->orderBy('source','asc')->orderBy('releaseType','asc')->orderBy('timeStamp','desc')->get(['currencyCode','timeStamp','close','count','hight','low','open','releaseType','source'],'priceUnit');
+        $rates = $rates->orderBy('currencyCode','asc')->orderBy('source','asc')->orderBy('releaseType','asc')->orderBy('timeStamp','desc')->get(['currencyCode','timeStamp','close','count','high','low','open','releaseType','source','priceUnit']);
 
         return $this->success($rates);
     }
