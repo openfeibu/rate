@@ -133,7 +133,8 @@ class XmlResponse
         if (!empty($this->rowName)) {
             return $this->rowName;
         }
-        return 'row_' . $row;
+        //return 'row_' . $row;
+        return 'row';
     }
 
     /**
